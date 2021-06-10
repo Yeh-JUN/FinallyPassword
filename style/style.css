@@ -1,0 +1,48 @@
+.outside-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    text-align: center;
+}
+
+.display-container{
+    min-height: 200px;
+    line-height: 200px;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+.add-Random{
+    min-width: 190px;
+}
+
+#num{
+    display: block;
+    margin: 0 auto;
+    background-color: black;
+    color: aliceblue;
+    width: 192px;
+    margin-bottom: 10px;
+}
+
+.button-Group{
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+button{
+    min-width: 60px;
+    min-height: 60px;
+    margin-bottom: 5px;
+}
+#reset,
+#zero{
+    width: 92px;
+}
+
+#check{
+    min-width: 190px;
+}
