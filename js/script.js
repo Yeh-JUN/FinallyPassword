@@ -51,7 +51,7 @@ const checkGame = () =>{
         alert("繼續遊戲!");
     }
     else if(_input == result){
-        alert('恭喜終極密碼猜對了! 請你吃個糖~');
+        alert('Wow!恭喜終極密碼猜對了! ');
         resetInit();
     }
 
@@ -68,9 +68,11 @@ const resetInit = () =>{
             buttonG[i].setAttribute('style' ,"background-color:#212529");
         }
     }
+
     displayClear();
     max.innerText = 100;
     min.innerText = 0;
+    
 }
 
 const displayClear= () =>{

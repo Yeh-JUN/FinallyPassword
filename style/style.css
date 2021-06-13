@@ -38,6 +38,9 @@ button{
     min-height: 60px;
     margin-bottom: 5px;
 }
+.btn-dark:hover{
+    font-size:20px;
+}
 #reset,
 #zero{
     width: 92px;
