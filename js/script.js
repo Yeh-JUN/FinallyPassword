@@ -11,6 +11,7 @@ let minNum = 0;
 let min = document.getElementById('minNum');
 
 const startGame = () =>{
+    numDisplay.value ='';
     start.disabled = true;
     start.setAttribute('style' ,"background-color:black");
     num.disabled = false;
@@ -25,8 +26,8 @@ const startGame = () =>{
 }
 
 const checkGame = () =>{
-    _input = document.getElementById('num').value;
-    if(_input == ""){
+    const _input = numDisplay.value;
+    if(_input === ""){
         alert('沒有輸入任何數字,請重新輸入...');
     }
     else if(isNaN(_input)){
@@ -50,12 +51,11 @@ const checkGame = () =>{
         displayClear();
         alert("繼續遊戲!");
     }
-    else if(_input == result){
+    else if(parseInt(_input) === result){
         alert('Wow!恭喜終極密碼猜對了! ');
+        numDisplay.value = '玩家輸入數字...';
         resetInit();
     }
-
-    
 }
 
 const resetInit = () =>{
@@ -68,8 +68,9 @@ const resetInit = () =>{
             buttonG[i].setAttribute('style' ,"background-color:#212529");
         }
     }
-
-    displayClear();
+    
+    maxNum = 100;
+    minNum = 0;
     max.innerText = 100;
     min.innerText = 0;
     
@@ -86,5 +87,5 @@ document.querySelector('.button-Group').addEventListener('click' , function(e){
     let inputNum ='';
     inputNum = e.target.dataset.num;
     numDisplay.value += inputNum;
-},true);
+},false);
 reset.addEventListener('click' , resetInit);
