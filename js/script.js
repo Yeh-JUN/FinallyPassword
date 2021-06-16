@@ -21,7 +21,16 @@ const startGame = () =>{
             buttonG[i].setAttribute('style' ,"background-color:blue");
         }
     }
-    result = Math.floor(Math.random() * 101);
+    //result產生1~99的數字
+    minNum = Math.ceil(minNum);
+    maxNum = Math.floor(maxNum);    
+    result = Math.floor(Math.random() * (maxNum - minNum)+minNum);
+
+    if(result ===0){
+        result++;
+    }
+
+    console.log(result);
     alert('密碼已產生,開始遊戲');
 }
 
